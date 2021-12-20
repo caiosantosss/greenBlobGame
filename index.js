@@ -49,16 +49,40 @@ document.body.addEventListener('keydown', keyDown);
 document.body.addEventListener('keyup', keyUp);
 
 function keyDown(event) {
+  // up
+  if (event.keyCode == 38) {
+    upPressed = true;
+  }
   // down
   if (event.keyCode == 40) {
     downPressed = true;
   }
+  // right
+  if (event.keyCode = 39) {
+    rightPressed = true;
+  }
+  // left
+  if (event.keyCode = 37) {
+    leftPressed = true;
+  }
 }
 
 function keyUp(event) {
+  // down
+  if (event.keyCode == 38) {
+    downPressed = false;
+  }
   // up
   if (event.keyCode == 40) {
     downPressed = false;
+  }
+  // right
+  if (event.keyCode = 39) {
+    rightPressed = false;
+  }
+  // left
+  if (event.keyCode = 37) {
+    leftPressed = false;
   }
 }
 
