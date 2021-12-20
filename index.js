@@ -10,10 +10,15 @@ let downPressed = false;
 //Game Loop
 function drawGame() {
   clearScreen();
+  inputs();
   drawGreenBlob();
 }
 
-
+function inputs() {
+  if (downPressed) {
+    y = y + 10;
+  }
+}
 
 function drawGreenBlob() {
   ctx.fillStyle = "green";
@@ -31,13 +36,17 @@ document.body.addEventListener('keydown', keyDown);
 document.body.addEventListener('keyup', keyUp);
 
 function keyDown(event) {
+  // down
   if (event.keyCode == 40) {
     downPressed = true;
   }
 }
 
 function keyUp(event) {
-
+  // up
+  if (event.keyCode == 40) {
+    downPressed = false;
+  }
 }
 
 
